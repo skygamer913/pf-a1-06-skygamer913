@@ -65,16 +65,22 @@ Uma lista de 20 comandos do *Git*.
 - `git log --oneline`
     Uma versão simplificada do histórico, exibindo cada commit em apenas uma linha (ideal para uma visualização rápida).
 
-    - **Exemplo 1**: Ver o históricos em um determinada quantidade de commits exibidos (`-n`).
+    - **Exemplo 1**: Quando precisa ver o histórico em uma determinada quantidade de commits exibidos (`-n`).
     - **Exemplo 2**: Quando precisa ver o histórico filtrando por **palavras-chaves** (`--grep`).
  
 - `git show <hash-do-commit>`
     Mostra os detalhes e as alterações específicas introduzidas por um commit específico.
 
+    - **Exemplo 1**: Inspecionando o último commit feito (*HEAD*).
+    - **Exemplo 2**: Investigando um commit antigo pelo ID (*Hash*)
+
 ## Ramificações (Branches) e Fusões
 
 - `git branch`
     Lista todas as branches (ramificações) locais. A branch atual terá um asterisco (*) ao lado.
+
+    - **Exemplo 1**: Para verificar se certa *branch* existe no projeto
+    - **Exemplo 2**:
 
 - `git branch <nome-da-branch>`
     Cria uma nova branch com o nome especificado, sem sair da branch atual.
