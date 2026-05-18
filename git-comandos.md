@@ -59,12 +59,15 @@ Uma lista de 20 comandos do *Git*.
 - `git log`
     Exibe o histórico de commits do repositório, mostrando o autor, a data e a mensagem de cada um.
 
-    - **Exemplo 1**: Visualização do histórico completo e detalhado
-    - **Exemplo 2**: Visualização do histórico simplificado em uma linha (`--oneline`)
+    - **Exemplo 1**: Entender a evolução do código
+    - **Exemplo 2**: Descobrir quando um bug foi introduzido.
 
 - `git log --oneline`
     Uma versão simplificada do histórico, exibindo cada commit em apenas uma linha (ideal para uma visualização rápida).
 
+    - **Exemplo 1**: Ver o históricos em um determinada quantidade de commits exibidos (`-n`).
+    - **Exemplo 2**: Quando precisa ver o histórico filtrando por **palavras-chaves** (`--grep`).
+ 
 - `git show <hash-do-commit>`
     Mostra os detalhes e as alterações específicas introduzidas por um commit específico.
 
