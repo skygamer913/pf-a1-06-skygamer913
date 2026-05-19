@@ -80,10 +80,13 @@ Uma lista de 20 comandos do *Git*.
     Lista todas as branches (ramificações) locais. A branch atual terá um asterisco (*) ao lado.
 
     - **Exemplo 1**: Para verificar se certa *branch* existe no projeto
-    - **Exemplo 2**:
+    - **Exemplo 2**: Para ver todas as *branches* existentes no projeto
 
 - `git branch <nome-da-branch>`
     Cria uma nova branch com o nome especificado, sem sair da branch atual.
+
+    - **Exemplo 1**: Criando uma nova ramificação(*branch*) para uma tarefa específica 
+    - **Exemplo 2**: Quando quer corrgir certo bug sem prejudicar o código atual.
 
 - `git checkout <nome-da-branch>` (ou `git switch <nome-da-branch>`)
     Muda para a branch especificada. Para criar e mudar de branch ao mesmo tempo, você pode usar `git checkout -b <nome-da-branch>`.
@@ -94,10 +97,16 @@ Uma lista de 20 comandos do *Git*.
 - `git merge <nome-da-branch>`
     Combina o histórico da branch especificada com a branch onde você está atualmente.
 
+    - **Exemplo 1**: O Merge clássico sem conflitos (Fast-Forward), onde quando a *branch* que vai realizar o *merge* não teve alteração nesse momento.
+    - **Exemplo 2**: O Merge com Resolução de Conflitos, quando a *branch* onde será realizado o *merge* tiver uma alteração nesse momento.
+
 ## Repositórios Remotos e Sincronização
 
 - `git remote add origin <url-do-repositorio>`
-    Vincula o seu repositório local a um repositório remoto (como GitHub ou GitLab) sob o codinome "origin".
+    Vincula o seu repositório local a um repositório remoto (como *GitHub* ou *GitLab*) sob o codinome "**origin**".
+
+    - **Exemplo 1**: Vinculando um projeto novo ao GitHub.
+    - **Exemplo 2**: Corrigindo ou alterando a URL do repositório remoto.
 
 - `git push origin <nome-da-branch>`
     Envia os seus commits locais da branch especificada para o repositório remoto.
@@ -108,10 +117,20 @@ Uma lista de 20 comandos do *Git*.
 - `git fetch`
     Baixa as atualizações do repositório remoto para o seu histórico local, mas não altera os seus arquivos de trabalho atuais.
 
+    - **Exemplo 1**: Atualizando o seu radar antes de criar uma nova branch.
+    - **Exemplo 2**: Revisando as alterações do servidor com segurança.
+        Em que antes de usar o comando `git diff`, utiliza-se o comando `git fetch origin` para buscar atualizações antes de comparar.
+
 - `git pull`
-    Baixa as novidades do repositório remoto e já faz o merge automático na sua branch atual (é essencialmente um git fetch seguido de um git merge).
+    Baixa as novidades do repositório remoto e já faz o merge automático na sua branch atual (é essencialmente um `git fetch` seguido de um `git merge`).
+
+    - **Exemplo 1**: Sincronizando seu trabalho no início do dia. 
+    - **Exemplo 2**: Atualizando uma *branch* de funcionalidade específica.
 
 ## Desfazendo Alterações
 
-- `git reset --soft HEAD~1`
-    Desfaz o último commit mantendo as alterações dos arquivos intactas na Staging Area (prontas para serem corrigidas e commitadas de novo).
+- `git reset`
+    **Desfaz alterações e volta no tempo**. Ele funciona como um botão de "rebobinar" que permite mover o ponteiro do seu projeto (o HEAD) de volta para um commit específico do passado ou limpar arquivos que foram preparados por engano.
+
+    - **Exemplo 1**: Tirar arquivos da esteira de carregamento (`git reset` ou `--mixed`)
+    - **Exemplo 2**: Deletar os últimos commits e jogar fora as alterações (`git reset --hard`)
